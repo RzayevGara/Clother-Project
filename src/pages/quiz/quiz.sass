@@ -1,0 +1,18 @@
+@import '../../components/quiz/questions/questions'
+@import '../../components/quiz/stepper/stepper'
+@import '../../components/quiz/quiz-done/quizDone'
+
+.quiz-page
+    @include flex(column, center, center)
+    position: relative
+    min-height: 76vh
+    .quiz-page_container
+        @include flex(column, $align: center)
+        padding: 3rem 1rem
+        width: 100%
+        max-width: 91rem
+        gap: 5rem
+        @include responsive_md
+            padding: 5rem 2rem
+        @include responsive_lg
+            padding: 5rem

@@ -1,0 +1,246 @@
+.my-account
+    flex: 5
+    margin-top: 1rem
+    @include responsive_lg
+        margin-top: 0
+
+    .my-account-container
+        background-color: $menuColor
+        @include flex(column, $align: center)
+        padding: 4rem 0
+        height: 100%
+        .myaccount-menu-loading
+            @include flex(column, center, center)
+            padding: 5rem 0
+            height: 100%
+            @include responsive_lg
+                padding: 0
+            .myaccount-menu-loading_container
+                @include flex(column, center, center)
+                gap: 2rem
+                height: 15rem
+                @include responsive_lg
+                    height: 100%
+
+                .loading
+                    @include size(5.5rem, 5.5rem)
+                    @include responsive_lg
+                        @include size(8rem, 8rem)
+                p
+                    font-size: 1.1rem
+        h1
+            font-size: 1.6rem
+            line-height: 2.2rem
+            margin-bottom: 1rem
+            text-align: center
+        
+        .form-group
+            @include flex(column)
+            gap: 2.5rem
+            max-width: 25rem
+            width: 100%
+            padding: 1rem 2rem
+            @include responsive_md
+                padding: 2rem 3rem
+                max-width: none
+            @include responsive_lg
+                max-width: 35rem
+                gap: 3rem
+            @include responsive_xxl
+                max-width: none
+
+            .group
+                @include flex(column)
+                gap: 2.5rem
+                width: 100%
+                @include responsive_md
+                    @include flex(row)
+                    gap: 2.5rem
+                &:first-child
+                    @include flex(row, center, center)
+                @include responsive_lg
+                    @include flex(column)
+                    gap: 3rem
+                @include responsive_xxl
+                    @include flex( row)
+                    gap: 4rem
+
+                .profile-menu-user
+                    @include flex(column, center, center)
+                    gap: 2rem
+                    .profile-image
+                        @include size(8rem, 8rem)
+                        border-radius: 50%
+                    .image-buttons
+                        @include flex(row, $align: center)
+                        gap: 2rem
+                        display: none
+                        .save-btn
+                            @include flex(row, center, center)
+                            border: none
+                            background-color: $blueDark
+                            color: white
+                            cursor: pointer
+                            @include size(5rem, 2.5rem)
+                        .cancel-btn
+                            border: 1px solid $blueDark
+                            color: $blueDark
+                            background-color: transparent
+                            cursor: pointer
+                            @include size(5rem, 2.5rem)
+                            @include flex(row, center, center)
+
+                    span
+                        font-size: 1.2rem
+                        cursor: pointer
+                        position: relative
+                        &::after
+                            transform: scale(1, 1)
+                            content: ''
+                            position: absolute
+                            height: 1px
+                            width: 100%
+                            background-color: $blueDark
+                            left: 0
+                            bottom: 0
+                            transition: transform .3s ease
+                            transform-origin: 0% 100%
+                        
+                        &:hover::after
+                            transform: scale(0, 1)
+                form
+                    width: 100%
+                    .form-group-my_account
+                        @include flex(column)
+                        width: 100%
+                        gap: .8rem
+                        input
+                            @include size(100%, 3rem)
+                            padding: 0 1rem
+                            border: 1px solid black
+                            font-family: $avantGarde
+                            &:focus
+                                outline: none
+                        label
+                            @include responsive_lg
+                                font-size: 1.1rem
+                        .form-group_buttons
+                            @include flex(row, $align: center)
+                            gap: 1rem
+                            .update-btn, .save-btn
+                                border: none
+                                background-color: $blueDark
+                                color: white
+                                padding: .4rem 1.4rem
+                                cursor: pointer
+                            .save-btn
+                                display: none
+                                position: relative
+                                .save-loading-div
+                                    @include flex(row, center, center)
+                                    position: absolute
+                                    background-color: #2c3244b0
+                                    @include size(100%, 100%)
+                                    span
+                                        width: 25px !important
+                                        height: 25px !important
+                            .cancel-btn
+                                border: 1px solid $blueDark
+                                color: $blueDark
+                                background-color: transparent
+                                padding: .4rem 1.4rem
+                                cursor: pointer
+                                display: none
+
+
+            .change-password
+                margin-top: 1rem
+
+                @include responsive_md
+                    width: 25rem
+                @include responsive_lg
+                    width: 100%
+                @include responsive_xxl
+                    width: 25rem
+                .change-password_title
+                    font-size: 1.2rem
+                    cursor: pointer
+                    position: relative
+                    width: 15rem
+                    &::after
+                        transform: scale(1, 1)
+                        content: ''
+                        position: absolute
+                        height: 1px
+                        width: 100%
+                        background-color: $blueDark
+                        left: 0
+                        bottom: 0
+                        transition: transform .3s ease
+                        transform-origin: 0% 100%
+                    &:hover::after
+                        transform: scale(0, 1)
+                .change-password_section 
+                    display: none
+                    margin-top: 2rem
+                    animation: opacity .4s ease-in 1 forwards
+                @keyframes opacity
+                    0%
+                        opacity: 0
+                    100%
+                        opacity: 1
+                .change-password-section_active
+                    margin-top: 2rem
+                    display: block
+                    animation: opacity .4s ease-in 1 forwards
+                    form
+                        @include flex(column)
+                        gap: 2rem
+                    .form-password
+                        @include flex(column)
+                        width: 100%
+                        gap: .8rem
+                        input
+                            @include size(100%, 3rem)
+                            padding: 0 1rem
+                            border: 1px solid black
+                            font-family: $avantGarde
+                            &:focus
+                                outline: none
+                        label
+                            @include responsive_lg
+                                font-size: 1.1rem
+                    .password_buttons
+                        @include flex(row, $align: center)
+                        gap: 1rem
+                        .save-btn
+                            border: none
+                            background-color: $blueDark
+                            color: white
+                            padding: .4rem 1.4rem
+                            cursor: pointer
+                            position: relative
+                            .save-loading-div
+                                @include flex(row, center, center)
+                                position: absolute
+                                background-color: #2c3244b0
+                                @include size(100%, 100%)
+                                top: 0
+                                left: 0
+                                span
+                                    width: 25px !important
+                                    height: 25px !important
+                        .cancel-btn
+                            border: 1px solid $blueDark
+                            color: $blueDark
+                            background-color: transparent
+                            padding: .4rem 1.4rem
+                            cursor: pointer
+                            
+    .Toastify
+        font-size: .9rem
+        .Toastify__toast-body
+            svg
+                fill: $blueDark
+        .Toastify__progress-bar
+            background: $blueDark

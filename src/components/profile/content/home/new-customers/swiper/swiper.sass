@@ -1,0 +1,42 @@
+.swiper-new-customers
+    max-width: 91rem
+    width: 100%
+    padding: 1rem
+    @include flex(column)
+    gap: 1rem
+    @include responsive_md
+        padding: 1rem 2rem
+    @include responsive_lg  
+        padding: 1rem 5rem
+
+    h4
+        @include font(1.5rem, 400)
+        font-family: $tabac-medium
+        @include responsive_lg
+            font-size: 1.75rem
+    p
+        font-size: 0.75rem
+        font-family: $avantGarde
+        margin-top: 1rem
+        max-width: 30rem
+        @include responsive_lg
+            font-size: 0.875rem
+            max-width: 34rem
+    .swiper
+        padding: 2rem 0
+        .swiper-wrapper
+            .swiper-slide
+                max-width: 18.75rem
+                img
+                    width: 100%
+        .swiper-button-next
+            color: black
+        .swiper-button-prev
+            color: black
+    .view-more-btn
+        border: 1px solid black
+        background-color: transparent
+        font-family: $avantGarde
+        padding: .5rem 4rem
+        align-self: center
+        cursor: pointer

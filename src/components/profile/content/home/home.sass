@@ -1,0 +1,84 @@
+.profile-home
+    flex: 5
+    background-color: $menuColor
+    margin-top: 1rem
+    @include responsive_lg
+        margin-top: 0
+    .profile-home_container
+        height: 100%
+        @include flex(column, space-evenly ,center)
+        padding: 3rem 0
+        position: relative 
+        margin: auto
+        width: 100%
+        padding: 3rem 1rem
+        .shuffle-area
+            overflow-x: hidden
+            width: 13rem
+            @include responsive_sm
+                width: 17rem
+            @include responsive_lg
+                width: 22rem
+            .shuffle-image
+                @include flex(column, center, center)
+                width: 100%
+                position: relative 
+                left: 0
+                animation: opacity .5s ease-in 1 forwards
+                img
+                    width: 10rem
+                    border-radius: 30%
+                    @include responsive_sm
+                        width: 15rem
+                    @include responsive_lg
+                        width: 20rem
+            .dislike-active
+                @include flex(column, center, center)
+                width: 100%
+                transition: .5s
+                position: relative 
+                left: 20rem
+                transform: rotate(45deg)
+                img
+                    width: 10rem
+                    border-radius: 30%
+                    @include responsive_sm
+                        width: 15rem
+                    @include responsive_lg
+                        width: 20rem
+            .like-active
+                @include flex(column, center, center)
+                width: 100%
+                transition: .5s
+                position: relative 
+                left: -20rem
+                transform: rotate(-45deg)
+                img
+                    width: 10rem
+                    border-radius: 30%
+                    @include responsive_sm
+                        width: 15rem
+                    @include responsive_lg
+                        width: 20rem
+            .like-dislike_buttons
+                button
+                    border: 1px solid #b5b5b5
+
+            @keyframes opacity
+                0%
+                    opacity: 0
+                100%
+                    opacity: 1
+
+        .take-quiz
+            max-width: 26rem
+            height: 20rem
+            text-align: center
+            @include flex(column, center, center)
+            gap: 2rem
+            p
+                @include font(1.2rem, 500, $height: 2rem)
+                @include responsive_lg
+                    font-size: 1.5rem
+            a
+                @extend .blue-button-style

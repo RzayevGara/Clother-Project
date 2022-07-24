@@ -1,0 +1,32 @@
+.blue-button-style
+    border: none
+    background-color: $blueDark
+    padding: 1rem 3rem
+    color: white
+    @include font(.8rem)
+    cursor: pointer
+    font-family: $avantGarde
+    @include flex(row, $align: center)
+    gap: 1rem
+    @include responsive_lg
+        @include font(1rem)
+
+.bordered-button-style
+    font-family: $avantGarde
+    color: white
+    border: 1px solid #E0E1E2
+    background-color: transparent
+    padding: .6rem 3rem
+    max-width: 18.75rem
+    cursor: pointer
+
+.authLoading
+    position: absolute
+    background-color: rgba(78, 78, 78, 0.342)
+    @include size(100%, 100%)
+    top: 0
+    z-index: 1
+    @include flex(column, center, center)
+    gap: 2rem
+    .loading
+        @include size(100%, 30%)

@@ -1,0 +1,40 @@
+@import './survey/survey'
+@import './my-styles/myStyles'
+
+.your-style
+    flex: 5
+    margin-top: 2rem
+    @include responsive_lg
+        margin-top: 0
+
+    .your-style_container
+        .update-style-btn
+            @extend .blue-button-style
+            font-family: $avantGarde-bold
+            padding: 0
+            width: 15rem
+            height: 3.438rem
+            @include flex(row, center, center)
+            @include font(.8rem,400)
+            @include responsive_lg
+                width: 18.75rem
+                font-size: .9rem
+
+        .your-style_surveys
+            @include flex(column)
+            gap: 1.5rem
+            margin-top: 3rem
+            h3
+                font-family: $tabac-medium
+                @include font(1.125rem, 400)
+            .surveys-container
+                @include flex(row, space-evenly)
+                flex-wrap: wrap
+                gap: 1.2rem
+            @include responsive_lg
+                h3
+                    font-size: 1.25rem
+                .surveys-container
+                    justify-content: flex-start
+                    flex-wrap: nowrap
+                    gap: 1.5rem

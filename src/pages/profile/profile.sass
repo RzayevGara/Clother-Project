@@ -1,0 +1,20 @@
+@import '../../components/profile/menu/menu'
+@import '../../components/profile/content/home/home'
+@import '../../components/profile/content/your-style/yourStyle'
+@import '../../components/profile/content/home/new-customers/newCustomers'
+@import '../../components/profile/content/my-account/myAccount'
+@import '../../components/profile/content/orders/orders'
+@import '../../components/profile/content/payments/payments'
+
+#profile
+    @include flex(column, $align: center)
+    .profile-container
+        width: 100%
+        @include flex(row, space-between)
+        max-width: 91rem
+        padding: 0 1rem
+        @include responsive_md
+            padding: 0 2rem
+        @include responsive_lg
+            padding: 2rem 5rem
+            gap: 2rem

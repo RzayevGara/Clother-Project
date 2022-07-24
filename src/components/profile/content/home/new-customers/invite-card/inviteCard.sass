@@ -1,0 +1,46 @@
+.invite-card
+    width: 100%
+    @include flex(row, flex-end)
+    padding: 0 1rem
+    max-width: 91rem
+    margin: 5rem 0
+    @include responsive_md
+        padding: 0 2rem 0 4rem
+        margin: 6rem 0
+    @include responsive_lg
+        padding: 0 5rem
+        margin: 8rem 0
+    .invite-card_container
+        width: 60rem
+        background-color: $menuColor
+        @include flex(column, $align: center)
+        padding: 2rem 0
+        gap: 2rem
+        .invite-card-image
+            width: 70%
+        .invite-card_button
+            @include flex(column, $align: center)
+            gap: .7rem
+            h4
+                font-family: $tabac-medium
+                @include font(1.3rem, 400)
+            .invite-card_buttons
+                @include flex(row, center, center)
+                gap: 1rem
+                .whatsapp-icon
+                    @include size(3rem, 3rem)
+                .telegram-icon
+                    @include size(2.7rem, 2.7rem)
+
+        @include responsive_md
+            flex-direction: row
+            padding: 0
+            .invite-card-image
+                position: relative
+                left: -2rem
+                width: 55%
+            .invite-card_button
+                gap: 1.5rem
+                @include responsive_lg
+                    h4
+                        font-size: 1.75rem

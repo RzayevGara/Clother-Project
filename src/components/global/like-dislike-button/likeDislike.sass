@@ -1,0 +1,14 @@
+.like-dislike_buttons
+    @include flex(row, center)
+    gap: 1.5rem
+    margin-top: 2rem
+    button
+        @include size(3rem, 3rem)
+        background-color: $menuColor
+        @include flex(row, center, center)
+        border: none
+        cursor: pointer
+        box-shadow: 0px 4px 5px rgba(18, 18, 18, 0.08)
+        border-radius: 6px
+        @include responsive_lg
+            @include size(4.5rem, 4.5rem)

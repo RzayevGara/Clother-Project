@@ -1,0 +1,22 @@
+.home-about
+    padding: 4rem 1rem
+    .home-about-container
+        @include flex(column, $align: center)
+        gap: 2rem
+        h2
+            @include font(1.7rem, 400)
+        p
+            max-width: 30.5rem
+            @include font(1rem, $spacing: .5px)
+            text-align: center
+            font-family: $avantGarde
+    @include responsive_md
+        padding: 7rem 2rem
+    @include responsive_lg
+        padding: 7rem 5rem
+        .home-about-container
+            h2
+                @include font(2rem, 400)
+            p
+                @include font(1.1rem, $height: 30px)
+                max-width: 33.5rem

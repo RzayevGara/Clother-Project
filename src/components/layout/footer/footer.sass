@@ -1,0 +1,106 @@
+footer
+    background-color: $blueDark
+    color: white
+    @include flex(column, $align: center)
+    .footer-container
+        @include flex(column, $align: center)
+        gap: 5rem
+        padding: 3rem 1rem
+        max-width: 91rem
+        width: 100%
+        @include responsive_md
+            padding: 3rem 2rem
+        @include responsive_lg
+            padding: 5rem 5rem
+            @include flex(row, space-between, flex-start)
+            gap: 0
+
+        .footer-logo
+            @include flex(column, $align: center)
+            gap: 2rem
+            padding-top: .2rem
+            img
+                width: 125px
+            a
+                border: 1px solid white
+                cursor: pointer
+                color: white
+                @include font(.9rem, 400)
+                padding: .7rem 4rem
+                font-family: $avantGarde
+            @include responsive_lg
+                @include flex(column, $align: flex-start)
+                gap: 3rem
+                img
+                    width: 150px
+                button
+                    padding: .85rem 5.5rem
+        .footer-list
+            width: 100%
+            letter-spacing: 0.1em
+            @include flex(column, $align: center)
+            ul
+                @include flex(column, $align: center)
+                gap: 1.2rem
+                li
+                    a
+                        color: white
+                        font-family: $tabac-semibold
+            .footer-contact
+                @include flex(column, $align: center)
+                gap: 1rem
+                margin-top: 3rem
+                div
+                    @include flex(row, $align: center)
+                    gap: .5rem
+                    p
+                        @include font(1rem)
+                        font-family: $avantGarde
+            @include responsive_sm
+                width: auto
+                margin-top: 0
+            @include responsive_md
+                .footer-contact
+                    flex-direction: row
+            @include responsive_lg 
+                ul
+                    gap: 3rem
+                    flex-direction: row
+                    justify-content: center
+                .footer-contact
+                    gap: 2rem
+        .footer-follow
+            @include flex(column, $align: center)
+            @include responsive_lg
+                @include flex(column, $align: flex-start)
+            p
+                font-size: 1.1rem
+                letter-spacing: 0.1em
+            .footer-follow_container
+                @include flex(row, $align: center)
+                gap: 1rem
+                margin-top: 1.5rem
+                .circle-social-icons
+                    @include size(2.2rem, 2.2rem)
+                    border: 1px solid $brown
+                    @include flex(row, center, center)
+                    border-radius: 50%
+                    cursor: pointer
+    .footer-rights
+        border-top: 1px solid rgba(224, 225, 226, 0.3)
+        @include flex(row, center)
+        width: 100%
+        .footer-right-container
+            padding: 1rem
+            font-size: .75rem
+            letter-spacing: 0.1em
+            @include flex(row, space-between, center)
+            width: 100%
+            max-width: 91rem
+            opacity: .9
+            @include responsive_md
+                padding: 1.5rem 2rem
+            @include responsive_lg
+                padding: 1.7rem 5rem
+            p
+                font-family: $avantGarde

@@ -1,0 +1,39 @@
+.categories
+    max-width: 91rem
+    padding: 0 1rem
+    margin: auto
+    margin-top: 5rem
+    @include responsive_md
+        padding: 0 2rem
+    @include responsive_lg
+        padding: 0 5rem
+
+    .categories-container
+        width: 100%
+        @include flex(row, space-between, center)
+        gap: 1.25rem
+        overflow-x: auto
+        padding: 1rem 0
+
+        .category
+            @include flex(row, center, center)
+            width: 14rem
+            padding: 1.5rem 0.5rem
+            gap: 1rem
+            background-color: #FCFBFB
+            cursor: pointer
+            flex-shrink: 0
+            border: 1px solid #d3d3d3
+            @include responsive_lg
+                padding: 2.5rem 0
+                width: 18.75rem
+
+            p
+                font-size: 1.125
+                @include responsive_lg
+                    font-size: 1.375rem
+
+        .active
+            border: 1px solid #CC7B56
+            background-color: #CC7B5633
+

@@ -1,0 +1,87 @@
+.profile-menu
+    right: 0
+    top: 3.65rem
+    display: none
+    z-index: 10
+    position: fixed
+    height: auto
+    .profile-menu_container
+        background-color: $menuColor
+        padding: 0
+        @include flex(column)
+        width: 16rem
+        .profile-menu_user
+            padding: 1.3rem
+            @include flex(row, $align: center)
+            gap: 1.7rem
+            font-size: 0.875rem
+            .profile-image
+                @include size(3.125rem, 3.125rem)
+                border-radius: 50%
+            h4
+                @include flex(column)
+                span
+                    font-family: $avantGarde
+        .profile-menu_tabs
+            div
+                @include flex(row, $align: center)
+                gap: 1.5rem
+                font-size: 0.875rem
+                padding-left: 2rem
+                p
+                    width: 100%
+                a,p
+                    padding: 1rem 0
+                svg
+                    width: 1.5rem
+                    path
+                        fill: black
+                h4
+                    @include flex(column)
+                    span
+                        font-family: $avantGarde-bold
+                &:not(&:nth-last-child(1))
+                    a
+                        border-bottom: 1px solid rgba(128, 128, 128, 0.5)
+                        width: 100%
+    
+    @include responsive_md
+        top: 4.35rem
+    @include responsive_lg
+        flex: 2
+        display: flex
+        position: static
+        .profile-menu_container
+            width: 100%
+            min-width: 17rem
+            background-color: transparent
+            padding: 0
+            .profile-menu_tabs
+                padding: 0
+                background-color: $menuColor
+                div
+                    padding-left: 2rem
+                    font-size: 1rem
+                    p
+                        width: 100%
+                    a, p
+                        padding: 1.25rem 0
+                        cursor: pointer
+                    &:hover
+                        border-left: 4px solid $brown
+                        transition: .2s
+            .profile-menu_user
+                background-color: $menuColor
+                font-size: 1rem
+                padding: 2rem
+                margin-bottom: 1rem
+                margin-top: 0
+                img
+                    width: 4rem
+
+
+.profile-menu_active
+    display: block !important
+                    
+.profile-menu-tabs_active
+    border-left: 4px solid $brown

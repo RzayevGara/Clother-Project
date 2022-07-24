@@ -1,0 +1,43 @@
+.faq-questions
+    padding: 0 1rem
+    max-width: 91rem
+    margin: auto
+    margin-top: 5rem
+    margin-bottom: 10rem
+    @include responsive_md
+        padding: 0 2rem
+    @include responsive_lg
+        padding: 0 5rem
+
+    .faq-questions-container
+        @include flex(column, center, center)
+        width: 100%
+        gap: 2rem
+
+        .faq-item
+            @include flex(column)
+            max-width: 52rem
+            min-height: 16rem
+            padding: 1rem 2.5rem
+            gap: 1rem
+            background-color: #FCFBFB
+            @include responsive_sm
+                @include flex(row, center, center)
+                padding: 0 2.5rem
+                gap: 5rem
+
+            .info-container
+                width: 100%
+                @include flex(column, $align: flex-start)
+                @include responsive_sm
+                    width: 60%
+
+                p
+                    font-family: $avantGarde
+                    margin-top: 0.6rem
+                    margin-bottom: 1rem
+
+        .image-container
+            @include size(10.5rem, 10.5rem)
+            @include flex($align: center)
+

@@ -1,0 +1,49 @@
+.works
+    @include flex(column, $align: center)
+    color: white
+    background-color: $blueDark
+    padding: 7.5rem 1rem
+    gap: 6rem
+    .works-title
+        @include font(1.7rem, $align: center, $height: 2rem)
+        font-family: $tabac-medium
+    .works-container
+        @include flex(column)
+        gap: 5.5rem
+        max-width: 91rem
+        div
+            @include flex(column, $align: center)
+            max-width: 24rem
+            width: 100%
+            text-align: center
+            gap: 1rem
+            h4
+                margin-top: 2rem
+                @include font(1.1rem, 400)
+                font-family: $tabac-semibold
+            .step
+                @include font(3.5rem)
+                color: $brown
+                font-family: $avantGarde
+            .works-text
+                opacity: .8
+                font-family: $avantGarde
+                @include font(0.875rem)
+    @include responsive_md
+        .works-title
+            @include font(2rem)
+        .works-container
+            div
+                h4
+                    @include font(1.25rem)
+                .step
+                    @include font(4rem)
+    @include responsive_lg
+        .works-container
+            padding: 0rem 5rem
+            @include flex(row, space-between)
+            width: 100%
+            gap: 1.5rem
+            div
+                h4
+                    line-height: 2rem

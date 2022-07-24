@@ -1,0 +1,35 @@
+.help
+    background-color: $blueDark
+    color: white
+    @include flex(column, center, center)
+    padding: 7.5rem 1rem
+    text-align: center
+
+    h1
+        @include font(2rem, $height: 3rem)
+        @include responsive_lg
+            font-size: 2.25rem
+    
+    .input-container
+        @include flex(row, center, center)
+        @include size(75%, 42px)
+        background-color: #E0E1E24D
+        margin-top: 5rem
+        padding: 0 20px
+        @include responsive_lg
+            width: 35%
+
+        input
+            width: 100%
+            background-color: transparent
+            border: none
+            outline: none
+            padding-left: 10px
+            font-family: $avantGarde
+            @include font(0.875rem)
+            color: white
+            &::placeholder
+                color: #BEBFC1
+
+
+    

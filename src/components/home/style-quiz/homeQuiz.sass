@@ -1,0 +1,36 @@
+.home-quiz
+    padding: 0 1rem
+    max-width: 91rem
+    margin: auto
+    color: white
+    margin-top: 5rem
+    @include responsive_md
+        padding: 0 2rem
+    @include responsive_lg
+        padding: 0 5rem
+
+    .home-quiz-container
+        @include flex(column, $align: center)
+        width: 100%
+        background: linear-gradient(95.21deg, #2C3244 -0.31%, #47557C 47.05%, #2C3244 101.86%)
+        padding: 4rem 2rem
+        text-align: center
+        gap: 1.5rem
+        h2
+            @include font(1.3rem, 400)
+            font-family: $tabac-semibold
+        p
+            @include font(.9rem)
+            opacity: .9
+            max-width: 12rem
+            font-family: $avantGarde
+        .btn-quiz
+            @extend .blue-button-style
+            background-color: $brown
+            margin-top: 1rem
+        @include responsive_lg
+            h2
+                font-size: 1.6rem
+            p
+                font-size: 1rem
+                max-width: 14rem

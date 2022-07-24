@@ -1,0 +1,49 @@
+.title
+    background-color: #eceaeb
+    width: 100%
+    @include flex(row, center)
+    .title-container
+        max-width: 91rem
+        width: 100%
+        padding: 4rem 1rem
+        @include flex(row, center)
+        .title-text
+            @include flex(column,$align: center)
+            text-align: center
+            h1
+                width: 19rem
+                @include font(1.8rem, 400, $height: 43px)
+            p
+                width: 18rem
+                @include font(.8rem)
+                margin-top: 1.2rem
+                font-family: $avantGarde
+
+            .btn-quiz
+                @extend .blue-button-style
+                margin-top: 3rem
+                color: white
+        img
+            display: none
+        @include responsive_sm
+            @include flex(row, space-between, center)
+            .title-text
+                text-align: left
+                align-items: flex-start
+            img
+                display: block
+                max-width: 45%
+        @include responsive_md
+            padding: 5.5rem 2rem
+
+            img
+                width: 100%
+        @include  responsive_lg
+            padding: 5.5rem 5rem
+            .title-text
+                h1
+                    width: 22rem
+                    @include font(2.3rem, $height: 45px)
+                p
+                    width: 21rem
+                    @include font(1rem)

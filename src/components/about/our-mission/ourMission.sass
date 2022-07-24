@@ -1,0 +1,38 @@
+.our-mission
+    @include flex(column, $align: center)
+    .our-mission_container
+        max-width: 91rem
+        padding: 2rem 1rem
+        @include responsive_md
+            padding: 2rem
+        @include responsive_lg
+            padding: 2rem 5rem
+
+        .our-mission-image
+            width: 100%
+        .our-mission_content
+            @include flex(column, $align: center)
+            gap: 2.5rem
+            padding: 4rem 0
+            @include responsive_xl
+                @include flex(row, space-evenly, flex-start)
+                gap: 2rem
+                flex-wrap: wrap
+            div
+                @include flex(column)
+                gap: 1.5rem
+                max-width: 24rem
+                flex-shrink: 0
+                h3
+                    @include flex(row, $align: center)
+                    gap: .5rem
+                    font-family: $tabac-medium
+                    @include font(1.25rem, 400)
+                p
+                    font-family: $avantGarde
+                    @include font(.8rem)
+                @include responsive_lg
+                    h3
+                        font-size: 1.5rem
+                    p
+                        font-size: 1rem

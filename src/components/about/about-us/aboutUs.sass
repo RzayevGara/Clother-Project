@@ -1,0 +1,20 @@
+.about-us
+    .about-us_image
+        width: 100%
+    .about-us_container
+        @include flex(column, $align: center)
+        padding: 4rem 1rem
+        gap: 3rem
+        h1
+            @include font(2rem, 400)
+        p
+            font-family: $avantGarde
+            @include font(1rem, $align: center, $height: 1.8rem)
+            max-width: 30.5rem
+        @include responsive_lg
+            padding: 6rem 5rem
+            h1
+                font-size: 2.25rem
+            p
+                font-size: 1.25rem
+                max-width: 40rem

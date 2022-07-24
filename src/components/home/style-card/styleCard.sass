@@ -1,0 +1,19 @@
+.card-style
+    padding: 4rem 1rem
+    @include flex(column, $align: center)
+    margin: auto
+    gap: 4rem
+    max-width: 91rem
+    h2
+        @include font(1.7rem, 400, $spacing: .5px)
+    .card-style-container
+        @include flex(column)
+        gap: 2rem
+    @include responsive_md
+        padding: 5rem 2rem
+        .card-style-container
+            @include flex(row)
+    @include responsive_lg
+        padding: 6rem 5rem
+        h2
+            font-size: 2rem

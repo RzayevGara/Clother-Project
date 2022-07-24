@@ -1,0 +1,16 @@
+.quiz-done
+    @include flex(column, $align: center)
+    gap: 2.5rem
+    text-align: center
+    max-width: 25rem
+    @include responsive_lg
+        max-width: 29rem
+    h3
+        font-size: 1.7rem
+        @include responsive_lg
+            font-size: 2rem
+    p
+        font-size: 1rem
+        line-height: 1.7rem
+        @include responsive_lg
+            font-size: 1.2rem

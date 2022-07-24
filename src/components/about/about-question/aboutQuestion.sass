@@ -1,0 +1,33 @@
+.about-question
+    @include flex(row, center)
+    padding: 2rem 1rem
+    @include responsive_md
+        padding: 2rem
+    @include responsive_lg
+        padding: 2rem 5rem
+    .about-question_container
+        max-width: 39rem
+        width: 100%
+        @include flex(column, $align: center)
+        text-align: center
+        gap: 1rem
+        padding: 2.5rem 3rem
+        border: 1px solid $brown
+        h4
+            font-family: $tabac-medium
+            @include font(0.875rem, 400)
+        p
+            font-family: $avantGarde
+            @include font(0.75rem)
+            max-width: 15rem
+            span
+                color: $brown
+                text-decoration: underline
+                text-underline-offset: 2px
+                cursor: pointer
+        @include responsive_lg
+            h4
+                font-size: 1rem
+            p
+                font-size: 0.875rem
+                max-width: 18rem

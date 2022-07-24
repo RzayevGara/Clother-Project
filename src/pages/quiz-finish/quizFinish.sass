@@ -1,0 +1,55 @@
+.quiz-finish_success
+    @include flex(column, center, center)
+    gap: 2.5rem
+    text-align: center
+    min-height: 76vh
+    padding: 0 1rem
+    h3
+        @include font(1.5rem)
+        line-height: 2.5rem
+        @include responsive_lg
+            font-size: 2rem
+    .quiz-finish_buttons
+        @include flex(column, $align: center)
+        gap: 1rem
+        .order-now-btn
+            @extend .blue-button-style
+            max-width: 17rem
+            position: relative
+            @include flex(row, center, center)
+            .order-loading-div
+                @include flex(row, center, center)
+                position: absolute
+                background-color: #2c3244b0
+                @include size(100%, 100%)
+        .update-quiz-btn
+            @extend .bordered-button-style
+            max-width: 17rem
+            color: $blueDark
+            border: 2px solid $blueDark
+            padding: .7rem 3rem
+            font-weight: 600
+    .Toastify
+        font-size: .9rem
+        .Toastify__toast-body
+            svg
+                fill: $blueDark
+        .Toastify__progress-bar
+            background: $blueDark
+            
+.quiz-finish_error
+    @include flex(column, center, center)
+    gap: 3rem
+    text-align: center
+    min-height: 76vh
+    padding: 0 1rem
+    h3
+        @include font(1.5rem)
+        line-height: 2.5rem
+        @include responsive_lg
+            font-size: 2rem
+    svg
+        width: 8rem
+    button
+        @extend .blue-button-style
+        max-width: 17rem

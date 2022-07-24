@@ -1,0 +1,34 @@
+.order-lists
+    padding: 2rem
+    ul
+        @include flex(row, center)
+        flex-wrap: wrap
+        gap: 2.5rem
+        @include responsive_lg
+            justify-content: space-around
+        @media (min-width: 1410px)
+            justify-content: space-between
+
+        li
+            @include flex(column, $align: center)
+            border: 1px solid #2c32445c
+            border-radius: .5rem
+            padding: 1rem 1.3rem
+            gap: 1rem
+            @include responsive_lg
+                width: calc(100%/2 - 1.5rem)
+            @include responsive_xl
+                width: auto
+
+            .order-info
+                @include flex(column)
+                gap: .4rem
+                p
+                    @include font(1rem, 500)
+                    span
+                        font-family: $avantGarde !important
+                        @include font(.9rem, 600)
+                    .paid-yes
+                        color: green
+                    .paid-no
+                        color: red

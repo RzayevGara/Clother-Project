@@ -1,0 +1,45 @@
+.my-styles
+    margin-top: 5rem
+    @include flex(column)
+    gap: 3rem
+    .my-styles-block
+        background-color: $whiteLight
+        @include flex(row)
+        flex-wrap: wrap
+        padding: 2rem 3rem
+        gap: 3rem
+        // &:last-child
+        //     div
+        //         max-width: 17rem
+
+        @include responsive_lg
+            gap: 2rem
+        @include responsive_xxl
+            gap: 0
+            justify-content: space-between
+            // &:last-child
+            //     justify-content: flex-start
+            //     gap: 2rem
+
+        div
+            @include flex(column)
+            gap: .7rem
+            max-width: 13.2rem
+            width: 100%
+            h4
+                @include font(1rem)
+            .my-styles-block_content
+                @include flex(column)
+                gap: .5rem
+                p
+                    font-family: $avantGarde
+                    font-size: 0.75rem
+            svg
+                height: 1.5rem
+                path
+                    fill: $brown
+            @include responsive_lg
+                h4
+                    font-size: 1.125rem
+                p
+                    font-size: 0.875rem

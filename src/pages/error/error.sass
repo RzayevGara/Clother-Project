@@ -1,0 +1,37 @@
+.error
+    @include flex(column, center, center)
+    min-height: 76vh
+    
+    .error-container
+        @include flex(column, center, center)
+        width: 100%
+        max-width: 60rem
+        text-align: center
+        padding: 4rem
+        margin: 3rem 0
+        @include responsive_md
+            margin: 5rem 0
+        @include responsive_lg
+            margin: 7rem 0
+
+        h1
+            color: $blueDark
+            font-size: 6rem
+            margin-bottom: 4rem
+            @include responsive_md
+                font-size: 8rem
+                margin-bottom: 5rem
+            @include responsive_lg
+                font-size: 12rem
+                margin-bottom: 8rem
+
+        span
+            background-color: $blueDark
+            color: white
+            padding: .4rem 1rem
+            font-size: 1.1rem
+            @include responsive_md
+                padding: .4rem 2rem
+            @include responsive_lg
+                font-size: 1.3rem
+                padding: .4rem 4rem

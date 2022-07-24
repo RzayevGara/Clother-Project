@@ -1,0 +1,32 @@
+@import './order-empty/orderEmpty.sass'
+@import './order-data/orderData.sass'
+    
+.orders
+    flex: 5
+    margin-top: 1rem
+    @include responsive_lg
+        margin-top: 0
+    
+    .orders-container
+        background-color: $menuColor
+        height: 100%
+        .order-menu-loading
+            @include flex(column, center, center)
+            padding: 5rem 0
+            height: 100%
+            @include responsive_lg
+                padding: 0
+            .order-menu-loading_container
+                @include flex(column, center, center)
+                gap: 2rem
+                height: 15rem
+                @include responsive_lg
+                    height: 100%
+
+                .loading
+                    @include size(5.5rem, 5.5rem)
+                    @include responsive_lg
+                        @include size(8rem, 8rem)
+                p
+                    font-size: 1.1rem
+        

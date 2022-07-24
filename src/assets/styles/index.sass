@@ -1,0 +1,71 @@
+// utils
+@import './utils/_variables'
+@import './utils/_mixins'
+@import './utils/_reset'
+@import './utils/_responsive-mixins'
+@import './utils/_extend'
+
+// layout
+@import '../../components/layout/header/header'
+@import '../../components/layout/footer/footer'
+
+
+// global component
+@import '../../components/global/see-more-button/seeMore'
+@import '../../components/global/like-dislike-button/likeDislike'
+
+// pages
+@import '../../pages/home/home'
+@import '../../pages/about/about'
+@import '../../pages/profile/profile'
+@import '../../pages/faq/faq'
+@import '../../pages/sign-up/signUp'
+@import '../../pages/login/login'
+@import '../../pages/password-reset/passwordReset'
+@import '../../pages/email-link/emailLink'
+@import '../../pages/error/error'
+@import '../../pages/quiz/quiz'
+@import '../../pages/quiz-finish/quizFinish'
+
+// fonts
+@font-face
+  font-family: 'TabacG2'
+  src: local('TabacG2'), url('../../fonts/Tabac G2/TabacG2.ttf') format('truetype')
+
+@font-face
+  font-family: 'TabacG2 medium'
+  src: local('TabacG2'), url('../../fonts/Tabac G2/TabacG2Medium.ttf') format('truetype')
+  
+@font-face
+  font-family: 'TabacG2 SemiBold'
+  src: local('TabacG2'), url('../../fonts/Tabac G2/TabacG2SemiBold.ttf') format('truetype')
+
+@font-face
+  font-family: 'Avant Garde'
+  src: local('Avant Garde'), url('../../fonts/Avant Garde/AvantGarde.ttf') format('truetype')
+
+@font-face
+  font-family: 'Avant Garde bold'
+  src: local('Avant Garde'), url('../../fonts/Avant Garde/AvantGardeBold.ttf') format('truetype')
+
+
+// global styles
+
+html
+    scroll-behavior: smooth
+
+body
+  &::before
+    content: ''
+    display: block
+    margin-top: 3.5rem
+    @include responsive_md
+      margin-top: 3.9rem
+
+.error-message
+    color: #bf1650
+    &:before
+        display: inline
+        content: "⚠ "
+
+  

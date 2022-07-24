@@ -1,0 +1,59 @@
+@import '../../components/sign-in/password-input/passwordInput'
+
+.email-link
+    @include flex(column, $align: center)
+    
+    .email-link-container
+        width: 100%
+        max-width: 48rem
+        padding: 4rem 0
+
+        form
+            background-color: $menuColor
+            @include flex(column, $align: center)
+            gap: 2rem
+            padding: 4rem 2rem
+            position: relative
+            @include responsive_sm
+                padding: 4rem
+            @include responsive_md
+                padding: 4rem 7rem
+
+            .email-link-loading
+                @extend .authLoading
+            h1
+                font-family: $tabac-medium
+                text-align: center
+                @include font(1.75rem, 400)
+                margin-bottom: 1rem
+                @include responsive_lg
+                    font-size: 2rem
+            
+            div
+                @include flex(column)
+                gap: .5rem
+                width: 100%
+                input
+                    @include size(100%, 3rem)
+                    padding: 0 1rem
+                    border: 1px solid black
+                    font-family: $avantGarde
+                    &:focus
+                        outline: none
+                label
+                    @include responsive_lg
+                        font-size: 1.1rem
+            
+            .reset-password-btn
+                @extend .blue-button-style
+                margin-top: 2rem
+            
+            .success-password-change
+                @include flex(column, center, center)
+                gap: 2.5rem
+                margin: 2.5rem 0
+                text-align: center
+                p
+                    font-size: 1.2rem
+                .navigate-login-btn
+                    @extend .blue-button-style

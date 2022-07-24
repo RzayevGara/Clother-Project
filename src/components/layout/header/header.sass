@@ -1,0 +1,196 @@
+header
+    position: fixed
+    top: 0
+    left: 0
+    @include size(100%)
+    @include flex(column, $align: center)
+    background-color: white
+    z-index: 1000
+    @include responsive_md
+        border-bottom: 1px solid #d9d9d9
+    .header-container
+        border-bottom: 1px solid #d9d9d9
+        padding: 1rem
+        position: relative
+        @include size(100%, 100%)
+        background-color: white
+        max-width: 91rem
+        @include responsive_md
+            @include flex( row, space-between, center)
+            border: none
+            padding: 1rem 2rem
+        @include responsive_lg
+            padding: 1rem 5rem
+
+        .header-left
+            @include flex(row, $align: center)
+            height: 100%
+            gap: 1rem
+            z-index: 1
+            background-color: white
+            .hamburger-btn
+                @include size(25px, 25px)
+                @include flex(column, space-between, center)
+                padding: .3rem 0
+                .line
+                    @include size(85%, .1rem)
+                    background-color: black
+                    transition: .5s
+            .hamburder-active
+                justify-content: center
+                position: relative
+                .line
+                    &:nth-child(1)
+                        position: absolute
+                        transform: rotate(45deg)
+                        transition: .5s
+                    &:nth-child(2)
+                        opacity: 0
+                        transition: .1s
+                    &:nth-child(3)
+                        position: absolute
+                        transform: rotate(-45deg)
+                        transition: .5s
+            .header-logo-link
+                width: 100px
+                @include flex(row, $align: center)
+                .header-logo
+                    width: 100%
+            @include responsive_md
+                .hamburger-btn
+                    display: none
+
+        .header-center
+            @include flex
+            position: absolute
+            background-color: white
+            z-index: -1
+            border-bottom: 1px solid #d9d9d9
+            top: -20rem
+            left: 0
+            padding: 1rem
+            width: 100%
+            transition: .7s
+            .nav-list
+                @include flex(column)
+                gap: 1rem
+                button
+                    background-color: transparent
+                    border: none
+                    @include responsive_sm
+                        display: none
+                    a
+                        @include flex(row, $align: center)
+                        gap: .4rem
+                        @include font(1rem, 400, $spacing: .5px)
+                        font-family: $avantGarde
+
+            @include responsive_md
+                position: static
+                border: none
+                z-index: 1
+                padding: 0
+                @include flex(row, center, center)
+                width: auto
+                .nav-list
+                    flex-direction: row
+                    li
+                        a
+                            padding-bottom: .2rem
+                            transition: .4s
+                            background-image: linear-gradient(currentColor,currentColor)
+                            background-position-y: 100%
+                            background-repeat: no-repeat
+                            background-size: 0% .1rem
+                            &:hover
+                                background-size: 100% .1rem
+                                transition: background-size .4s cubic-bezier(.23,1,.32,1)
+                        .active-menu
+                            background-position-y: 100%
+                            background-size: 100% .1rem
+                    @include responsive_lg
+                        gap: 2.5rem
+
+
+        .nav-active
+            top: 3.5rem
+            transition: .5s
+
+        .header-right
+            position: absolute
+            right: 1rem
+            top: 0
+            @include flex(row, $align: center)
+            height: 100%
+            @include flex
+            z-index: 3
+            background-color: white
+            .header-login
+                @include flex(row, $align: center)
+                gap: 1rem
+                .btn-login
+                    display: none
+                    background-color: transparent
+                    display: block
+                    border: none
+                    a
+                        @include flex(row, $align: center)
+                        gap: .4rem
+                        @include font(1rem, 400, $spacing: .5px)
+                        font-family: $avantGarde
+                .btn-profile
+                    @include flex(row, center, center)
+                    border: none
+                    background-color: transparent
+                    cursor: pointer
+                    gap: .7rem
+                    span
+                        font-size: .8rem
+                        white-space: nowrap
+                        display: flex
+                        font-family: $avantGarde
+                    img
+                        border-radius: 50%
+                        @include size(2.313rem, 2.313rem)
+                select
+                    font-family: $avantGarde
+                    padding: .4rem 0
+                    -webkit-appearance: none
+                    -moz-appearance: none
+                    background-image: url('../../../assets/images/svg-icons/arrowDown.svg')
+                    background-repeat: no-repeat
+                    background-position: calc(100% - .5rem) center
+                    padding-right: 2rem
+                    padding-left: .5rem
+                    background-color: transparent
+                    cursor: pointer
+                    option
+                        font-family: $avantGarde
+                    &:focus
+                        outline: none
+            @include responsive_md
+                position: static
+                height: auto
+
+    .profile-menu
+        display: none
+        border: 1px solid #d9d9d9
+        @include responsive_lg
+            position: absolute
+            right: 5rem
+            .profile-menu_container
+                .profile-menu_user
+                    display: none
+                .profile-menu_tabs
+                    .profil-menu_tab
+                        &:not(:nth-child(1))
+                            display: none
+                    .profile-menu-tabs_active
+                        @include responsive_lg
+                            border: none
+    .loading
+        color: $blueDark
+        position: absolute
+        bottom: -1px
+        width: 100%
+        z-index: 10

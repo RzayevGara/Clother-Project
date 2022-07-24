@@ -1,0 +1,46 @@
+.our-team
+    @include flex(column, $align: center)
+    padding: 0 1rem
+    max-width: 91rem
+    margin: auto
+    @include responsive_md       
+        padding: 0 2rem
+    @include responsive_lg
+        padding: 0 5rem
+    .our-team_container
+        border-top: 1px solid rgba(204, 123, 86, 0.5)
+        padding: 6rem 1rem
+        width: 100%
+        @include flex(column, $align: center)
+        gap: 4rem
+        @include responsive_lg
+            @include flex(row, space-between, flex-start)
+            padding: 6rem 2.5rem
+            gap: 2rem
+        div
+            max-width: 18.7rem
+            @include flex( column, $align: center)
+            text-align: center
+            gap: 1rem
+            img
+                width: 100%
+            h4
+                font-family: $avantGarde-bold
+                @include font(1rem)
+            p
+                font-family: $avantGarde
+                font-size: 0.75rem
+            .person-info
+                max-width: 12rem
+                padding-top: 1rem
+                border-top: 1px solid rgba(204, 123, 86, 0.5)
+                font-size: 0.625rem
+                opacity: .5
+            @include responsive_lg
+                h4
+                    @include font(1.125rem)
+                p
+                    font-size: 0.875rem
+                .person-info
+                    font-size: 0.75rem
+                    max-width: 14rem

@@ -1,0 +1,84 @@
+.subscription
+    @include flex(column, $align: center)
+    padding: 5rem 1rem
+    gap: 2.5rem
+    h2
+        @include font(1.7rem, 400)
+        font-family: $tabac-medium
+        @include responsive_lg
+            font-size: 2rem
+
+    .subscription-container
+        @include flex(column)
+        gap: 3rem
+        max-width: 40rem
+        width: 100%
+        background-color: $whiteLight
+        padding: 4rem 2rem
+        @include responsive_sm
+            padding: 6rem 7rem
+
+        form
+            @include flex(column, $align: center)
+            gap: 1.5rem
+            .form-group
+                @include flex(column)
+                gap: .5rem
+                width: 100%
+                input
+                    @include size(100%, 3rem)
+                    background-color: transparent
+                    border: 1px solid black
+                    padding: 0 1rem
+                    &:focus
+                        outline: none
+                label
+                    font-family: $avantGarde
+                    
+            .subscription-btn
+                @extend .blue-button-style
+                margin-top: 2rem
+                max-width: 12.8rem
+                width: 100%
+                position: relative
+                @include flex(row, center,center)
+                .subscription-loading-div
+                    @include flex(row, center, center)
+                    position: absolute
+                    background-color: #2c3244b0
+                    @include size(100%, 100%)
+                    span
+                        width: 30px !important
+                        height: 30px !important
+        .subscription-contact
+            @include flex(column)
+            gap: 1rem
+            margin-top: 1rem
+            padding-top: 1.5rem
+            background-image: linear-gradient(#E0E1E2,#E0E1E2)
+            background-size: 75% 1px
+            background-repeat: no-repeat
+            background-position: top center
+            @include responsive_sm
+                @include flex(row, space-between)
+                margin-top: 3rem
+
+            div
+                @include flex(row, $align: center)
+                gap: .5rem
+                svg
+                    path
+                        stroke: black
+                    rect
+                        stroke: black
+                p
+                    @include font(0.875rem)
+                    font-family: $avantGarde
+    .Toastify
+        font-size: .9rem
+        .Toastify__toast-body
+            svg
+                fill: $blueDark
+        .Toastify__progress-bar
+            background: $blueDark
+                
